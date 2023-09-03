@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora de Codar!</title>
+</head>
+<body>
+</body>
+<script>
+    /*
+    //Atividade 1
+    var nome_do_carro = "Fusca";
+    
+    document.write(nome_do_carro);
+                                    */
+
+    // Atividade 2
+    /*var client = prompt("Bem vindo! Qual é seu nome: ");
+    
+    alert("Olá " + client);
+                                    */
+    
+    //Atividade 3
+    /*var clientName = prompt("Bem vindo! Qual é seu nome?");
+    var clientYears = prompt("E mais uma coisinha... Qual é sua idade?");
+
+    alert("Olá "+ clientName + ", sua idade é " + clientYears);
+                                    */
+    //Atividade 4
+    var search = prompt("informe qual forma geometrica que deseja calcular a área: ");
+
+    switch(search.toUpperCase().normalize()){
+        case "Retângulo".toUpperCase().normalize("NFD").replace(/[^a-zA-Z\s]/g, ""):
+        var baseR = parseInt(prompt("Me diga, a base de seu respectivo retangulo: ")); 
+        var alturaR = parseInt(prompt("Me diga, a Altura de seu respectivo retangulo: "));
+        var retanguloA = baseR*alturaR
+         alert("A área do retangulo é " + retanguloA);
+        break;
+
+        case "Quadrado".toUpperCase():
+        var ladoQ = parseInt(prompt("Me diga o Lado: "));
+        var quadradoA = ladoQ * ladoQ;
+            alert("A área do quadrado é " + quadradoA); 
+        
+        break;
+
+        case "Losango".toUpperCase():
+        var diagonalM = parseInt(prompt("Informe a diagonal maior:"));
+        var diagonalMe = parseInt(prompt("Informe a diagonal menor:"));
+
+            if(diagonalM == diagonalMe){
+                alert("De F5, números iguais foram indentificados");
+            }else{
+                alert("A área do Losango é: " + diagonalM + diagonalMe / 2);
+            }
+        break;
+
+        case "Trapézio".toUpperCase().normalize("NFD").replace(/[^a-zA-Z\s]/g, ""):
+            var baseMT = parseInt(prompt("Me diga a sua base Maior: "));
+            var alturaT = parseInt(prompt("Me diga a sua altura: "));
+            var baseMeT = parseInt(prompt("Me diga sua base menor: "));
+                
+            if(baseMT == baseMeT){
+                alert("De F5, números iguais foram indentificados");
+            }else{
+                alert("A área do trapézio: " + baseMT + baseMeT * alturaT / 2 );
+            }
+        break;
+
+        case "Paralelogramo".toUpperCase():
+            var baseP = parseInt(prompt("Me diga sua Base:"));
+            var alturaP = parseInt(prompt("Me diga sua altura:"));
+
+            alert("Sua área de paralelograma é: "+ baseP * alturaP);
+        break;
+
+        case "Triângulo".toUpperCase().normalize("NFD").replace(/[^a-zA-Z\s]/g, ""):
+            var baseT = parseInt(prompt("Me diga sua Base:"));
+            var alturaT = parseInt(prompt("Me diga sua altura:"));
+
+            alert("Sua área do triângulo é: " + baseT*alturaT/2);
+        break;
+
+        case "Círculo".toUpperCase().normalize("NFD").replace(/[^a-zA-Z\s]/g, ""):
+            var pi = parseFloat(3,14);
+            var r = parseInt(prompt("me diga seu respectivo r: "));
+            var r2 = r*r;
+            var circle = pi * r2;
+            alert("A àrea do círculo é: " + circle); 
+        break;
+
+      default:
+        alert("Algo deu errado!, escreva novamente");
+    }
+</script>
+</html>
